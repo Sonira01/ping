@@ -1,0 +1,13 @@
+name: Send Daily Summaries
+
+on:
+  schedule:
+    - cron: '0 18 * * *'  # Every day at 6:00 PM (18:00 UTC)
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  send-summaries:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Daily Summaries
+        run: curl -fsS https://task-tapper.onrender.com/api/trigger-summaries || echo "Summary trigger failed"
