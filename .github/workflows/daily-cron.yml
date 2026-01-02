@@ -13,5 +13,5 @@ jobs:
       - name: Trigger backend cron
         run: |
           curl -X POST \
-            https://YOUR-RENDER-URL/api/cron/run \
+            https://denzo.onrender.com/api/cron/run \
             -H "x-cron-secret: ${{ secrets.CRON_SECRET }}"
