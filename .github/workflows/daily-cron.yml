@@ -2,7 +2,7 @@ name: Daily Scheduler
 
 on:
   schedule:
-    - cron: "0 15 * * *" # 9:30 PM IST
+    - cron: "0 16 * * *" # 9:30 PM IST
   workflow_dispatch:
 
 jobs:
